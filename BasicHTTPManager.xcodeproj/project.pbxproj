@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA8F827B243711C6002139A7 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F827A243711C6002139A7 /* URLSessionDataTaskProtocol.swift */; };
+		CA8F827E243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F827D243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift */; };
+		CA8F8281243711F1002139A7 /* URLSession - URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F8280243711F1002139A7 /* URLSession - URLSessionProtocol.swift */; };
+		CA8F8283243720F6002139A7 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F8282243720F6002139A7 /* URLSessionDataTaskMock.swift */; };
 		CAAA62D5241146E800C7A198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA62D4241146E800C7A198 /* AppDelegate.swift */; };
 		CAAA62D7241146E800C7A198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA62D6241146E800C7A198 /* ViewController.swift */; };
 		CAAA62DA241146E800C7A198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAA62D8241146E800C7A198 /* Main.storyboard */; };
@@ -16,7 +20,7 @@
 		CAAA62F5241146EA00C7A198 /* BasicHTTPManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA62F4241146EA00C7A198 /* BasicHTTPManagerUITests.swift */; };
 		CAAA6303241146FD00C7A198 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA6302241146FC00C7A198 /* HTTPManager.swift */; };
 		CACE5BAF2413863C0084B16E /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE5BAE2413863C0084B16E /* URLSessionProtocol.swift */; };
-		CACE5BB224138AD00084B16E /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE5BB124138AD00084B16E /* MockURLSession.swift */; };
+		CACE5BB224138AD00084B16E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE5BB124138AD00084B16E /* URLSessionMock.swift */; };
 		CACE5BB5241394650084B16E /* EndPointResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE5BB4241394650084B16E /* EndPointResponse.swift */; };
 		CACE5BB7241395560084B16E /* EndPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE5BB6241395560084B16E /* EndPointModel.swift */; };
 		CACE5BBA2413A25F0084B16E /* EndPointResponse303.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE5BB92413A25F0084B16E /* EndPointResponse303.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA8F827A243711C6002139A7 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		CA8F827D243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask - URLSessionDataTaskProtocol.swift"; sourceTree = "<group>"; };
+		CA8F8280243711F1002139A7 /* URLSession - URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession - URLSessionProtocol.swift"; sourceTree = "<group>"; };
+		CA8F8282243720F6002139A7 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		CAAA62D1241146E800C7A198 /* BasicHTTPManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicHTTPManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAA62D4241146E800C7A198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAAA62D6241146E800C7A198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +63,7 @@
 		CAAA62F6241146EA00C7A198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAAA6302241146FC00C7A198 /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
 		CACE5BAE2413863C0084B16E /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
-		CACE5BB124138AD00084B16E /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		CACE5BB124138AD00084B16E /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		CACE5BB4241394650084B16E /* EndPointResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointResponse.swift; sourceTree = "<group>"; };
 		CACE5BB6241395560084B16E /* EndPointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointModel.swift; sourceTree = "<group>"; };
 		CACE5BB92413A25F0084B16E /* EndPointResponse303.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointResponse303.swift; sourceTree = "<group>"; };
@@ -86,6 +94,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA8F827C243711CF002139A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CACE5BAE2413863C0084B16E /* URLSessionProtocol.swift */,
+				CA8F827A243711C6002139A7 /* URLSessionDataTaskProtocol.swift */,
+				CA8F827F243711E3002139A7 /* ProtocolExtensions */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CA8F827F243711E3002139A7 /* ProtocolExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA8F8280243711F1002139A7 /* URLSession - URLSessionProtocol.swift */,
+				CA8F827D243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift */,
+			);
+			path = ProtocolExtensions;
+			sourceTree = "<group>";
+		};
 		CAAA62C8241146E800C7A198 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +140,7 @@
 				CAAA62D6241146E800C7A198 /* ViewController.swift */,
 				CAAA6302241146FC00C7A198 /* HTTPManager.swift */,
 				CACE5BB82413955B0084B16E /* Models */,
-				CACE5BAE2413863C0084B16E /* URLSessionProtocol.swift */,
+				CA8F827C243711CF002139A7 /* Protocols */,
 				CAAA62D8241146E800C7A198 /* Main.storyboard */,
 				CAAA62DB241146E900C7A198 /* Assets.xcassets */,
 				CAAA62DD241146E900C7A198 /* LaunchScreen.storyboard */,
@@ -145,7 +172,8 @@
 		CACE5BB024138AB60084B16E /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				CACE5BB124138AD00084B16E /* MockURLSession.swift */,
+				CACE5BB124138AD00084B16E /* URLSessionMock.swift */,
+				CA8F8282243720F6002139A7 /* URLSessionDataTaskMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -300,7 +328,10 @@
 			files = (
 				CACE5BAF2413863C0084B16E /* URLSessionProtocol.swift in Sources */,
 				CAAA62D7241146E800C7A198 /* ViewController.swift in Sources */,
+				CA8F827E243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift in Sources */,
+				CA8F827B243711C6002139A7 /* URLSessionDataTaskProtocol.swift in Sources */,
 				CACE5BB7241395560084B16E /* EndPointModel.swift in Sources */,
+				CA8F8281243711F1002139A7 /* URLSession - URLSessionProtocol.swift in Sources */,
 				CAAA6303241146FD00C7A198 /* HTTPManager.swift in Sources */,
 				CAAA62D5241146E800C7A198 /* AppDelegate.swift in Sources */,
 			);
@@ -311,9 +342,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACE5BBA2413A25F0084B16E /* EndPointResponse303.swift in Sources */,
-				CACE5BB224138AD00084B16E /* MockURLSession.swift in Sources */,
+				CACE5BB224138AD00084B16E /* URLSessionMock.swift in Sources */,
 				CAAA62EA241146EA00C7A198 /* BasicHTTPManagerTests.swift in Sources */,
 				CACE5BB5241394650084B16E /* EndPointResponse.swift in Sources */,
+				CA8F8283243720F6002139A7 /* URLSessionDataTaskMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

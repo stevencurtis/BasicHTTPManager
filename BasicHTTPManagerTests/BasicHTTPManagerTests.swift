@@ -10,47 +10,69 @@ import XCTest
 @testable import BasicHTTPManager
 
 class BasicHTTPManagerTests: XCTestCase {
+    var urlSession: URLSessionMock?
+    var httpManager: HTTPManager<URLSessionMock>?
     
-    var urlSession: MockURLSession?
-    var httpManager: HTTPManager?
-
-    override func setUp() {
-        super.setUp()
-        urlSession = MockURLSession()
+    func testSuccessfulURLResponse() {
+        urlSession = URLSessionMock()
         httpManager = HTTPManager(session: urlSession!)
-    }
-
-    func testFailureURLResponse() {
-        urlSession = MockURLSession()
-        urlSession?.responseSuccess(willSucceed: false)
-        httpManager = HTTPManager(session: urlSession!)
-        let expectation = XCTestExpectation(description: #function)
-        let data = Data("test".utf8)
+        let expect = expectation(description: #function)
+        let data = Data("TEsts12".utf8)
         urlSession?.data = data
         let url = URL(fileURLWithPath: "http://www.google.com")
         httpManager?.get(url: url) { result in
             XCTAssertNotNil(result)
-            expectation.fulfill()
+            switch result {
+            case .success(let data):
+                let decodedString = String(decoding: data, as: UTF8.self)
+                XCTAssertEqual(decodedString, "TEsts12")
+               expect.fulfill()
+            case .failure:
+                XCTFail()
+            }
         }
-        wait(for: [expectation], timeout: 3.0)
+        waitForExpectations(timeout: 3.0)
     }
     
+    func testFailureURLResponse() {
+        // One way of testing failure is for the URLSession to simply provide no data to return
+        urlSession = URLSessionMock()
+        urlSession?.error = NSError(domain: "error", code: 101, userInfo: nil)
+        httpManager = HTTPManager(session: urlSession!)
+        let expect = expectation(description: #function)
+        let url = URL(fileURLWithPath: "http://www.google.com")
+        httpManager?.get(url: url) { result in
+            XCTAssertNotNil(result)
+            switch result {
+            case .success:
+                XCTFail()
+            case .failure(let error):
+                XCTAssertEqual((error as NSError).code, 101)
+                expect.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 3.0)
+    }
+
     func testBadlyFormattedURLResponse() {
-        urlSession = MockURLSession()
-        urlSession?.responseSuccess(willSucceed: true)
-        urlSession?.setData(data: nil)
+        urlSession = URLSessionMock()
         httpManager = HTTPManager(session: urlSession!)
         let expectation = XCTestExpectation(description: #function)
         let url = URL(fileURLWithPath: "http://www.google.com")
         httpManager?.get(url: url) {result in
-            XCTAssertNotNil(result)
-            expectation.fulfill()
+            switch result {
+            case .success:
+                XCTFail()
+            case .failure(let error):
+                XCTAssertNotNil(error)
+                expectation.fulfill()
+            }
         }
         wait(for: [expectation], timeout: 3.0)
     }
-    
+
     func testSuccessfulDataResponse(){
-        urlSession = MockURLSession()
+        urlSession = URLSessionMock()
         httpManager = HTTPManager(session: urlSession!)
         let expectation = XCTestExpectation(description: #function)
         let data = Data(endPointResponse.utf8)
@@ -72,10 +94,9 @@ class BasicHTTPManagerTests: XCTestCase {
             expectation.fulfill()
         }
     }
-    
+
     func testSuccessfulDataResponse303(){
-        urlSession = MockURLSession()
-        urlSession?.setStatusCode(code: 303)
+        urlSession = URLSessionMock()
         httpManager = HTTPManager(session: urlSession!)
         let expectation = XCTestExpectation(description: #function)
         let data = Data(endPointResponse303.utf8)
@@ -97,4 +118,5 @@ class BasicHTTPManagerTests: XCTestCase {
             expectation.fulfill()
         }
     }
+    
 }

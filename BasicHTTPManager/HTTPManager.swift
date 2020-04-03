@@ -8,18 +8,26 @@
 
 import Foundation
 
-public protocol HTTPManagerProtocol {
-    func get(url: URL, completionBlock: @escaping (Result<Data, Error>) -> Void)
-    init(session: URLSessionProtocol)
+protocol HTTPManagerProtocol {
+//    func get(url: URL, completionBlock: @escaping (Result<Data, Error>) -> Void)
+//    init<T: URLSessionProtocol>(session: T)
+    
+    associatedtype tpe
+    var session: tpe { get }
+    init(session: tpe)
 }
 
-class HTTPManager {
-
+class HTTPManager <T: URLSessionProtocol> {
     /// A URLProtocol instance that is replaced by the URLSession in production code
-    fileprivate let session: URLSessionProtocol
-
+    // fileprivate let session: URLSessionProtocol
+    
     /// required initiation of the HTTPManager instance
-    required init(session: URLSessionProtocol) {
+    //    required init(session: URLSessionProtocol) {
+
+    // internal not fileprivate
+    let session: T
+
+    required init(session: T) {
         self.session = session
     }
     
@@ -38,13 +46,13 @@ class HTTPManager {
     public func get(url: URL, completionBlock: @escaping (Result<Data, Error>) -> Void) {
         // make sure we pull new data each time
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
-        
+
         let task = session.dataTask(with: request) { data, response, error in
             guard error == nil else {
                 completionBlock(.failure(error!))
                 return
             }
-            
+
             guard
                 let responseData = data,
                 let httpResponse = response as? HTTPURLResponse,
@@ -64,7 +72,7 @@ class HTTPManager {
 
 
 
-extension URLSession: URLSessionProtocol {}
+//extension URLSession: URLSessionProtocol {}
 
 extension HTTPManager : HTTPManagerProtocol {}
 
