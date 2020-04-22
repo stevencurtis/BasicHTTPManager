@@ -9,19 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // for further configuration use URLSession(configuration: URLSessionConfiguration.default)
-        let urlsession = URLSession.shared
-        
-        // instantiate the HTTPManager
-        let httpManager = HTTPManager(session: urlsession)
-        
+        downloadData(HTTPManager(session: URLSession.shared), completion: {response in
+            // perform an action with the response
+            print (response)
+        })
+    }
+    
+    func downloadData<T: HTTPManagerProtocol>(_ httpManager: T, completion: @escaping (Result<Data, Error>) -> Void) {
         if let url = URL(string: "https://docs.google.com/uc?export=download&id=0Bz-w5tutuZIYeDU0VDRFWG9IVUE") {
-            httpManager.get(url: url, completionBlock: {result in
-                print (result)
+            httpManager.get(url: url, completionBlock: {data in
+                completion(data)
             })
         }
     }
+    
 }
-

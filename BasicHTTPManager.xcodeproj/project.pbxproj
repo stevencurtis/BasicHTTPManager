@@ -11,12 +11,17 @@
 		CA8F827E243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F827D243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift */; };
 		CA8F8281243711F1002139A7 /* URLSession - URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F8280243711F1002139A7 /* URLSession - URLSessionProtocol.swift */; };
 		CA8F8283243720F6002139A7 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F8282243720F6002139A7 /* URLSessionDataTaskMock.swift */; };
+		CA8F82872437539F002139A7 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F82862437539F002139A7 /* ViewControllerTests.swift */; };
+		CA8F828924375438002139A7 /* HTTPManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F828824375438002139A7 /* HTTPManagerMock.swift */; };
+		CA8F828B24375466002139A7 /* HTTPManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F828A24375466002139A7 /* HTTPManagerProtocol.swift */; };
+		CA8F828D24377408002139A7 /* BasicHTTPManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F828C24377408002139A7 /* BasicHTTPManagerTests.swift */; };
+		CA8F828F2437747D002139A7 /* HTTPManager - HTTPManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F828E2437747D002139A7 /* HTTPManager - HTTPManagerProtocol.swift */; };
 		CAAA62D5241146E800C7A198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA62D4241146E800C7A198 /* AppDelegate.swift */; };
 		CAAA62D7241146E800C7A198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA62D6241146E800C7A198 /* ViewController.swift */; };
 		CAAA62DA241146E800C7A198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAA62D8241146E800C7A198 /* Main.storyboard */; };
 		CAAA62DC241146E900C7A198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAA62DB241146E900C7A198 /* Assets.xcassets */; };
 		CAAA62DF241146E900C7A198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAA62DD241146E900C7A198 /* LaunchScreen.storyboard */; };
-		CAAA62EA241146EA00C7A198 /* BasicHTTPManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA62E9241146EA00C7A198 /* BasicHTTPManagerTests.swift */; };
+		CAAA62EA241146EA00C7A198 /* HTTPManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA62E9241146EA00C7A198 /* HTTPManagerTests.swift */; };
 		CAAA62F5241146EA00C7A198 /* BasicHTTPManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA62F4241146EA00C7A198 /* BasicHTTPManagerUITests.swift */; };
 		CAAA6303241146FD00C7A198 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAA6302241146FC00C7A198 /* HTTPManager.swift */; };
 		CACE5BAF2413863C0084B16E /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE5BAE2413863C0084B16E /* URLSessionProtocol.swift */; };
@@ -48,6 +53,11 @@
 		CA8F827D243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask - URLSessionDataTaskProtocol.swift"; sourceTree = "<group>"; };
 		CA8F8280243711F1002139A7 /* URLSession - URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession - URLSessionProtocol.swift"; sourceTree = "<group>"; };
 		CA8F8282243720F6002139A7 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		CA8F82862437539F002139A7 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		CA8F828824375438002139A7 /* HTTPManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManagerMock.swift; sourceTree = "<group>"; };
+		CA8F828A24375466002139A7 /* HTTPManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManagerProtocol.swift; sourceTree = "<group>"; };
+		CA8F828C24377408002139A7 /* BasicHTTPManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicHTTPManagerTests.swift; sourceTree = "<group>"; };
+		CA8F828E2437747D002139A7 /* HTTPManager - HTTPManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPManager - HTTPManagerProtocol.swift"; sourceTree = "<group>"; };
 		CAAA62D1241146E800C7A198 /* BasicHTTPManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicHTTPManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAA62D4241146E800C7A198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAAA62D6241146E800C7A198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +66,7 @@
 		CAAA62DE241146E900C7A198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAAA62E0241146E900C7A198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAAA62E5241146EA00C7A198 /* BasicHTTPManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicHTTPManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAAA62E9241146EA00C7A198 /* BasicHTTPManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicHTTPManagerTests.swift; sourceTree = "<group>"; };
+		CAAA62E9241146EA00C7A198 /* HTTPManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManagerTests.swift; sourceTree = "<group>"; };
 		CAAA62EB241146EA00C7A198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAAA62F0241146EA00C7A198 /* BasicHTTPManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicHTTPManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAA62F4241146EA00C7A198 /* BasicHTTPManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicHTTPManagerUITests.swift; sourceTree = "<group>"; };
@@ -98,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				CACE5BAE2413863C0084B16E /* URLSessionProtocol.swift */,
+				CA8F828A24375466002139A7 /* HTTPManagerProtocol.swift */,
 				CA8F827A243711C6002139A7 /* URLSessionDataTaskProtocol.swift */,
 				CA8F827F243711E3002139A7 /* ProtocolExtensions */,
 			);
@@ -108,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				CA8F8280243711F1002139A7 /* URLSession - URLSessionProtocol.swift */,
+				CA8F828E2437747D002139A7 /* HTTPManager - HTTPManagerProtocol.swift */,
 				CA8F827D243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift */,
 			);
 			path = ProtocolExtensions;
@@ -154,7 +166,9 @@
 			children = (
 				CACE5BB32413944E0084B16E /* Assets */,
 				CACE5BB024138AB60084B16E /* Mocks */,
-				CAAA62E9241146EA00C7A198 /* BasicHTTPManagerTests.swift */,
+				CAAA62E9241146EA00C7A198 /* HTTPManagerTests.swift */,
+				CA8F82862437539F002139A7 /* ViewControllerTests.swift */,
+				CA8F828C24377408002139A7 /* BasicHTTPManagerTests.swift */,
 				CAAA62EB241146EA00C7A198 /* Info.plist */,
 			);
 			path = BasicHTTPManagerTests;
@@ -173,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CACE5BB124138AD00084B16E /* URLSessionMock.swift */,
+				CA8F828824375438002139A7 /* HTTPManagerMock.swift */,
 				CA8F8282243720F6002139A7 /* URLSessionDataTaskMock.swift */,
 			);
 			path = Mocks;
@@ -326,12 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8F828B24375466002139A7 /* HTTPManagerProtocol.swift in Sources */,
 				CACE5BAF2413863C0084B16E /* URLSessionProtocol.swift in Sources */,
 				CAAA62D7241146E800C7A198 /* ViewController.swift in Sources */,
 				CA8F827E243711DF002139A7 /* URLSessionDataTask - URLSessionDataTaskProtocol.swift in Sources */,
 				CA8F827B243711C6002139A7 /* URLSessionDataTaskProtocol.swift in Sources */,
 				CACE5BB7241395560084B16E /* EndPointModel.swift in Sources */,
 				CA8F8281243711F1002139A7 /* URLSession - URLSessionProtocol.swift in Sources */,
+				CA8F828F2437747D002139A7 /* HTTPManager - HTTPManagerProtocol.swift in Sources */,
 				CAAA6303241146FD00C7A198 /* HTTPManager.swift in Sources */,
 				CAAA62D5241146E800C7A198 /* AppDelegate.swift in Sources */,
 			);
@@ -343,9 +360,12 @@
 			files = (
 				CACE5BBA2413A25F0084B16E /* EndPointResponse303.swift in Sources */,
 				CACE5BB224138AD00084B16E /* URLSessionMock.swift in Sources */,
-				CAAA62EA241146EA00C7A198 /* BasicHTTPManagerTests.swift in Sources */,
+				CAAA62EA241146EA00C7A198 /* HTTPManagerTests.swift in Sources */,
+				CA8F828924375438002139A7 /* HTTPManagerMock.swift in Sources */,
+				CA8F82872437539F002139A7 /* ViewControllerTests.swift in Sources */,
 				CACE5BB5241394650084B16E /* EndPointResponse.swift in Sources */,
 				CA8F8283243720F6002139A7 /* URLSessionDataTaskMock.swift in Sources */,
+				CA8F828D24377408002139A7 /* BasicHTTPManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

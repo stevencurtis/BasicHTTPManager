@@ -8,21 +8,9 @@
 
 import Foundation
 
-protocol HTTPManagerProtocol {
-//    func get(url: URL, completionBlock: @escaping (Result<Data, Error>) -> Void)
-//    init<T: URLSessionProtocol>(session: T)
-    
-    associatedtype tpe
-    var session: tpe { get }
-    init(session: tpe)
-}
 
 class HTTPManager <T: URLSessionProtocol> {
     /// A URLProtocol instance that is replaced by the URLSession in production code
-    // fileprivate let session: URLSessionProtocol
-    
-    /// required initiation of the HTTPManager instance
-    //    required init(session: URLSessionProtocol) {
 
     // internal not fileprivate
     let session: T
@@ -54,7 +42,7 @@ class HTTPManager <T: URLSessionProtocol> {
             }
 
             guard
-                let responseData = data,
+                let _ = data,
                 let httpResponse = response as? HTTPURLResponse,
                 200 ..< 300 ~= httpResponse.statusCode else {
                     if let data = data {
@@ -64,15 +52,12 @@ class HTTPManager <T: URLSessionProtocol> {
                     }
                     return
             }
-            completionBlock(.success(responseData))
+            // if passed guard
+            if let data = data {
+                completionBlock(.success(data))
+            }
         }
         task.resume()
     }
 }
-
-
-
-//extension URLSession: URLSessionProtocol {}
-
-extension HTTPManager : HTTPManagerProtocol {}
 
