@@ -11,6 +11,7 @@ import Foundation
 
 class HTTPManager <T: URLSessionProtocol> {
     /// A URLProtocol instance that is replaced by the URLSession in production code
+    
 
     // internal not fileprivate
     let session: T
