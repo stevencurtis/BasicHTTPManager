@@ -1,6 +1,5 @@
 //
 //  HTTPManager.swift
-//  NYT
 //
 //  Created by Steven Curtis on 29/04/2019.
 //  Copyright © 2019 Steven Curtis. All rights reserved.
@@ -9,7 +8,7 @@
 import Foundation
 
 
-class HTTPManager <T: URLSessionProtocol> {
+class HTTPManager<T: URLSessionProtocol> {
     /// A URLProtocol instance that is replaced by the URLSession in production code
     
 

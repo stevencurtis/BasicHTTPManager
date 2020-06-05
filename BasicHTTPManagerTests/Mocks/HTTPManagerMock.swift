@@ -19,7 +19,7 @@ class HTTPManagerMock <T: URLSessionProtocol>: HTTPManagerProtocol {
     
     let session: T
 
-    required init(session: aType) {
+    required init(session: T) {
       self.session = session
     }
 
